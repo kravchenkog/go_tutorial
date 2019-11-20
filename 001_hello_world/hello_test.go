@@ -1,10 +1,10 @@
-package hello_test
+package hello
 
 import "testing"
 
-func TEstMe(t *testing.T) {
+func TestMe(t *testing.T) {
 	want := "Hello, world."
 	if got := Hello(); got != want {
-		t.Error("Hello() = %q", got, want)
+		t.Errorf("Hello() = %q, want %q", got, want)
 	}
 }
